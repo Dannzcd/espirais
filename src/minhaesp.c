@@ -1,0 +1,1 @@
+//Polyline(Sequence((n * cos(n * 60°), n * sin(n * 60°)), n, 0, 30))
