@@ -76,9 +76,9 @@ int getInputNumber(int argc, char **argv){
 }
 
 void getPredictedPoint(Ponto *ponto, int nthpoint){
-    int x,y, semiciclo, i;
+    int x,y, semiciclo, i, aux_int;
     Ponto aux, ref_left, ref_right;
-    bool acabou = false;
+    //bool acabou = false;
 
     //O padrão se repete a cada vez que a espiral cruza o eixo y
     const Ponto direcoes[MAX_DIRECOES] = {
@@ -125,44 +125,37 @@ void getPredictedPoint(Ponto *ponto, int nthpoint){
         x = -2;
         y = -1;
 
-        while(true){
-            aux = direcoes[semiciclo % 3];
-            
-            switch(semiciclo % 3){
+        for (i = 4; i < nthpoint; i++){
+            aux_int = semiciclo % 3;
+            aux = direcoes[aux_int];
+            switch(aux_int){
                 case 0:
-                    while (x < ref_right.x+2 && i < nthpoint){
-                        x += aux.x;
-                        y += aux.y;
-                        ++i;
-                    }
+                    x += aux.x;
+                    y += aux.y;
 
-                    if (i == nthpoint) acabou = true;
-                    else setCoordenadas(&ref_right, x, y);
+                    if (x == ref_right.x+2){
+                        semiciclo++;
+                        setCoordenadas(&ref_right, x, y);
+                    }
                     break;
                 case 1:
-                    while (x > 0 && i < nthpoint){
-                        x += aux.x;
-                        y += aux.y;
-                        ++i;
-                    }    
+                    x += aux.x;
+                    y += aux.y;
 
-                    if (i == nthpoint) acabou = true;
+                    if (x == 0){
+                        semiciclo++;
+                    }
                     break;
                 case 2:
-                    while (x > ref_left.x-2 && i < nthpoint){
-                        x += aux.x;
-                        y += aux.y;
-                        ++i;
-                    }
+                    x += aux.x;
+                    y += aux.y;
 
-                    if (i == nthpoint) acabou = true;
-                    else setCoordenadas(&ref_left, x, y);
+                    if (x == ref_left.x-2){
+                        semiciclo++;
+                        setCoordenadas(&ref_left, x, y);
+                    } 
                     break;
             }
-    
-            if (acabou) break;
-    
-            ++semiciclo;
         }
     }
     
