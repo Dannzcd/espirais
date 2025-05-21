@@ -5,7 +5,7 @@
 - Verifique se o GCC está instalado
 
 ## Geração dos executáeis
-- Para compilar os programas, digite "make" na pasta trab_loureiro
+- Para compilar os programas, digite "make" na pasta espirais
 - Para deletar as pastas temporárias, digite make clean
 
 ## Rodar os executáveis
