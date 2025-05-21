@@ -27,11 +27,16 @@ int main(int argc, char **argv){
     numero = getInputNumber(argc, argv);
     if (numero == -1) return -1;
 
-    printf("Numero: %d\n", numero);
-
     getPredictedPoint(&ponto, numero);
-
     printf("Ponto: (%d, %d)\n", ponto.x, ponto.y);
+
+    /* printf("\nTeste\n");
+    setCoordenadas(&ponto, 0, 0);
+
+    for (int i = 0; i <= 20; i++){
+        getPredictedPoint(&ponto, i);
+        printf("Ponto: (%d, %d)\n", ponto.x, ponto.y);
+    } */
 
     return 0;
 }

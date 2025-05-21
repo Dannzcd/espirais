@@ -16,10 +16,10 @@
 ##Nome dos arquivos
 
 Espiral quadrada
-- Espquadrada
+- espquadrada
 
 Espiral triangular
-- Esptriangular
+- esptriangular
 
-Espiral personalizada(insira o nome aqui)
-- 
+Espiral personalizada(hexagonal)
+- minhaesp

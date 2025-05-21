@@ -3,16 +3,16 @@
     "configurations": [
         {
             "name": "(gdb) Launch",
-            "type": "cppdbg",
+            "type": "bash",
             "request": "launch",
-            "program": "${cwd}/trab_loureiro/output/espquadrada",
+            "program": "${cwd}/trab_loureiro/output/minhaesp", // Ajuste para o caminho do seu executável
             "args": [],
             "stopAtEntry": false,
             "environment": [],
             "cwd": ".",
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "/usr/bin/gdb", // Caminho para o gdb
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

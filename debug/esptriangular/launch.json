@@ -5,22 +5,21 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${cwd}/trab_loureiro/output/esptriangular", // Ajuste para o caminho do seu executável
+            "program": "${cwd}/trab_loureiro/output/esptriangular",
             "args": [],
             "stopAtEntry": false,
             "environment": [],
             "cwd": ".",
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb", // Caminho para o gdb
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ],
-            "preLaunchTask": "build" // Isso executa a tarefa 'build' antes de iniciar o debug
+            ]
         }
     ]
 }
