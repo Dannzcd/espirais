@@ -1,19 +1,19 @@
-#Espirais 
+# Espirais 
 
-##OBS
+## OBS
 - Testadas em ambiente linux
 - Verifique se o GCC está instalado
 
-##Geração dos executáeis
+## Geração dos executáeis
 - Para compilar os programas, digite "make" na pasta trab_loureiro
 - Para deletar as pastas temporárias, digite make clean
 
-##Rodar os executáveis
+## Rodar os executáveis
 1. Para rodar os programas gerados pelo Makefile, entre na pasta "output"
 2. Digite "./nome_do_programa"
 3. Insira uma entrada
 
-##Nome dos arquivos
+## Nome dos arquivos
 
 Espiral quadrada
 - espquadrada
